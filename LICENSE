@@ -20,3 +20,15 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+在 ckeditor for wordpress 中安装方式
+wget https://codeload.github.com/ninozhang/lineheight/zip/master
+
+cd /home/www/htdocs/wp-content/plugins/ckeditor-for-wordpress/ckeditor/plugins
+mv master lineheight.zip
+unzip lineheight.zip
+mv lineheight-master lineheight
+
+cd /home/www/htdocs/wp-content/plugins/ckeditor-for-wordpress
+vim ckeditor.config.js 
+在你喜欢的位置添加 { name: 'lineheight' },
+并且启用这个插件 config.extraPlugins += (config.extraPlugins ? ',lineheight' : 'lineheight' );
